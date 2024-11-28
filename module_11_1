@@ -1,0 +1,15 @@
+import pandas
+
+pd = pandas
+
+def to_read(file: str) -> list:
+    x = []
+    rd = pd.read_csv(file, sep='\s')
+    for i in rd:
+        if len(i) == 4:
+            x.append(i)
+    return x
+
+
+
+print(to_read('test.txt'))
